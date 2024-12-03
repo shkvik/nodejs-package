@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-package",
+  "name": "nodejs-package-example",
   "author": "shkvik",
   "license": "MIT",
-  "version": "1.0.0",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "version": "1.0.3",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "build:prod": "npm run build && npm prune --omit=dev",
+    "build:prod": "tsc --build tsconfig.prod.json && npm prune --omit=dev",
     "test": "jest"
   },
   "description": "",
